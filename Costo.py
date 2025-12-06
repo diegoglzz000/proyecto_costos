@@ -10,7 +10,7 @@ st.header('Datos de la actividad')
 def user_input_features():
     Presupuesto = st.number_input('Presupuesto:', min_value=0.0, value=0.0, step=1.0)
     Tiempo_min = st.number_input('Tiempo invertido (min):', min_value=0.0, value=0.0, step=1.0)
-    Tipo = st.number_input('Tipo de actividad (1 a n):', min_value=1, max_value=10, value=1, step=1)
+    Tipo = st.number_input('Tipo de actividad (1 a 6):', min_value=1, max_value=6, value=1, step=1)
     Momento = st.number_input('Momento (0 = mañana, 1 = tarde, 2 = noche):', min_value=0, max_value=3, value=0, step=1)
     Personas = st.number_input('Número de personas:', min_value=1, value=1, step=1)
 
@@ -31,7 +31,7 @@ df = user_input_features()
 datos = pd.read_csv('registrosdgg_limpio.csv')
 
 # Variables para el modelo
-X = datos[['Presupuesto', 'Tiempo_min', 'Tipo', 'Momento', 'Personas']]
+X = datos[['Presupuesto', 'Tiempo invertido', 'Tipo', 'Momento', 'No. de personas']]
 y = datos['Costo']
 
 # Entrenamiento exactamente igual que tu código
