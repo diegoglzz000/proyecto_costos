@@ -19,7 +19,7 @@ def user_input_features():
         'Tiempo invertido': Tiempo_invertido,
         'Tipo': Tipo,
         'Momento': Momento,
-        'No. de personas': Personas,
+        'No. de personas': No_de_Personas,
     }
 
     features = pd.DataFrame(user_input_data, index=[0])
