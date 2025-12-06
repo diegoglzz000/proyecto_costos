@@ -9,17 +9,17 @@ st.header('Datos de la actividad')
 
 def user_input_features():
     Presupuesto = st.number_input('Presupuesto:', min_value=0.0, value=0.0, step=1.0)
-    Tiempo_min = st.number_input('Tiempo invertido (min):', min_value=0.0, value=0.0, step=1.0)
+    Tiempo invertido = st.number_input('Tiempo invertido (min):', min_value=0.0, value=0.0, step=1.0)
     Tipo = st.number_input('Tipo de actividad (1 a 6):', min_value=1, max_value=6, value=1, step=1)
     Momento = st.number_input('Momento (0 = mañana, 1 = tarde, 2 = noche):', min_value=0, max_value=3, value=0, step=1)
-    Personas = st.number_input('Número de personas:', min_value=1, value=1, step=1)
+    No. de Personas = st.number_input('Número de personas:', min_value=1, value=1, step=1)
 
     user_input_data = {
         'Presupuesto': Presupuesto,
-        'Tiempo_min': Tiempo_min,
+        'Tiempo invertido': Tiempo_min,
         'Tipo': Tipo,
         'Momento': Momento,
-        'Personas': Personas,
+        'No. de personas': Personas,
     }
 
     features = pd.DataFrame(user_input_data, index=[0])
@@ -53,10 +53,10 @@ b0 = LR.intercept_
 prediccion = (
     b0
     + b[0] * df['Presupuesto']
-    + b[1] * df['Tiempo_min']
+    + b[1] * df['Tiempo invertido']
     + b[2] * df['Tipo']
     + b[3] * df['Momento']
-    + b[4] * df['Personas']
+    + b[4] * df['No. de ersonas']
 )
 
 st.subheader('Cálculo del costo estimado')
