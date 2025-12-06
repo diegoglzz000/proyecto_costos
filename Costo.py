@@ -9,10 +9,10 @@ st.header('Datos de la actividad')
 
 def user_input_features():
     Presupuesto = st.number_input('Presupuesto:', min_value=0.0, value=0.0, step=1.0)
-    Tiempo invertido = st.number_input('Tiempo invertido (min):', min_value=0.0, value=0.0, step=1.0)
+    Tiempo_invertido = st.number_input('Tiempo invertido (min):', min_value=0.0, value=0.0, step=1.0)
     Tipo = st.number_input('Tipo de actividad (1 a 6):', min_value=1, max_value=6, value=1, step=1)
     Momento = st.number_input('Momento (0 = mañana, 1 = tarde, 2 = noche):', min_value=0, max_value=3, value=0, step=1)
-    No. de Personas = st.number_input('Número de personas:', min_value=1, value=1, step=1)
+    No_de_Personas = st.number_input('Número de personas:', min_value=1, value=1, step=1)
 
     user_input_data = {
         'Presupuesto': Presupuesto,
