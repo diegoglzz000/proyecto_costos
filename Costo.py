@@ -16,7 +16,7 @@ def user_input_features():
 
     user_input_data = {
         'Presupuesto': Presupuesto,
-        'Tiempo invertido': Tiempo_min,
+        'Tiempo invertido': Tiempo_invertido,
         'Tipo': Tipo,
         'Momento': Momento,
         'No. de personas': Personas,
